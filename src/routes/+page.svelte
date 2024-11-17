@@ -1,12 +1,17 @@
 <script lang="ts">
-	import { Button } from 'flowbite-svelte';
 	import { ListOutline, GridOutline } from 'flowbite-svelte-icons';
 	import DropdownFilter from '$lib/components/DropdownFilter.svelte';
 	import ListView from '$lib/components/ListView.svelte';
 	let { data } = $props();
 	let viewMode: 'list' | 'grid' = $state('list');
-
+	let filterByStatus = $state('all');
 	console.log(data.landpads);
+
+	let filteredData = $derived(
+		data.landpads.filter((landpad) =>
+			filterByStatus === 'all' ? true : landpad.status === filterByStatus
+		)
+	);
 </script>
 
 <main class="container mx-auto mt-8 px-2">
@@ -31,9 +36,9 @@
 		</div>
 
 		<div class="ml-auto">
-			<DropdownFilter />
+			<DropdownFilter bind:filterByStatus />
 		</div>
 	</div>
 
-	<ListView launches={data.landpads} onClick={() => {}} />
+	<ListView launches={filteredData} onClick={() => {}} />
 </main>

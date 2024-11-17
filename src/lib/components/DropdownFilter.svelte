@@ -2,7 +2,7 @@
 	import { Dropdown, Radio } from 'flowbite-svelte';
 	import { ChevronDownOutline, AdjustmentsVerticalSolid } from 'flowbite-svelte-icons';
 
-	let group = 'filterByStatus';
+	let { filterByStatus = $bindable() } = $props();
 </script>
 
 <button
@@ -15,12 +15,26 @@
 
 <Dropdown class="w-48 space-y-1 p-3">
 	<li class="rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600">
-		<Radio name="group2" color="blue" bind:group value={1}>Active</Radio>
+		<Radio name="filterByStatus" color="blue" bind:group={filterByStatus} value={'all'}>All</Radio>
 	</li>
 	<li class="rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600">
-		<Radio name="group2" color="blue" bind:group value={2}>Retired</Radio>
+		<Radio name="filterByStatus" color="blue" bind:group={filterByStatus} value={'active'}
+			>Active</Radio
+		>
 	</li>
 	<li class="rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600">
-		<Radio name="group2" color="blue" bind:group value={3}>Under Construction</Radio>
+		<Radio name="filterByStatus" color="blue" bind:group={filterByStatus} value={'retired'}
+			>Retired</Radio
+		>
+	</li>
+	<li class="rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600">
+		<Radio
+			name="filterByStatus"
+			color="blue"
+			bind:group={filterByStatus}
+			value={'under construction'}
+		>
+			Under Construction
+		</Radio>
 	</li>
 </Dropdown>
