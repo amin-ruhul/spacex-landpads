@@ -23,7 +23,7 @@
 		underConstructionLandingPads.length
 	]);
 
-	const options:ApexOptions = $derived({
+	const options: ApexOptions = $derived({
 		series,
 		colors: ['#16BDCA', '#E74694', '#1A56DB'],
 		chart: {
@@ -75,8 +75,7 @@
 	});
 </script>
 
-<div class="w-full rounded-lg border p-6 shadow">
-	<h5 class="me-1 text-xl font-bold leading-none text-gray-900">Landing Pads Status Chart</h5>
-
-	<Chart {options} class="w-full py-6" />
+<div class="w-full rounded-lg border border-[#E5E7EB] shadow-md">
+	<p class="p-3 font-semibold text-gray-900">Success Rate Chart</p>
+	<Chart {options} class="h-[315px] w-full" />
 </div>

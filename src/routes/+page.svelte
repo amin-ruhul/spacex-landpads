@@ -5,6 +5,7 @@
 	import Gridview from '$lib/components/Gridview.svelte';
 	import { Modal } from 'flowbite-svelte';
 	import DoughnutChart from '$lib/components/DoughnutChart.svelte';
+	import Map from '$lib/components/Map.svelte';
 
 	let { data } = $props();
 
@@ -25,9 +26,9 @@
 	}
 </script>
 
-<main class="container mx-auto mt-8 px-2">
-	<div class="grid gap-6 lg:grid-cols-[1fr,350px]">
-		<section>
+<main class="mx-auto mt-8 px-2 lg:px-20">
+	<div class="grid gap-6 lg:grid-cols-[1fr,520px]">
+		<section class="overflow-hidden lg:overflow-visible">
 			<div class="mb-4 flex items-center">
 				<div class="rounded-md border">
 					<button
@@ -60,7 +61,8 @@
 			{/if}
 		</section>
 
-		<section>
+		<section class="space-y-6 overflow-hidden">
+			<Map landingPads={filteredData} />
 			<DoughnutChart landpads={filteredData} />
 		</section>
 	</div>
