@@ -12,7 +12,11 @@
 	import ProgressBar from './ProgressBar.svelte';
 	import StatusTag from './StatusTag.svelte';
 
-	let { launches, onClick }: { launches: Landpad[]; onClick: (launch: Landpad) => void } = $props();
+	let {
+		launches,
+		onClick
+	}: { launches: Landpad[]; onClick: (data: { title: string; details: string }) => void } =
+		$props();
 </script>
 
 <Table shadow>
@@ -40,8 +44,10 @@
 				<TableBodyCell tdClass="text-gary-900  font-semibold text-sm p-4">
 					<button
 						class="cursor-pointer rounded-md bg-gray-100 px-3 py-1 text-gray-900"
-						onclick={() => onClick(launch)}>View Details</button
+						onclick={() => onClick({ title: launch.full_name, details: launch.details })}
 					>
+						View Details
+					</button>
 				</TableBodyCell>
 				<TableBodyCell tdClass="p-4">
 					<ProgressBar
