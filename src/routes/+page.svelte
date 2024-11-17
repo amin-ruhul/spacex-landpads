@@ -1,5 +1,9 @@
-<script >
+<script lang="ts">
  import { Button } from 'flowbite-svelte';
+
+ let { data } = $props();
+
+ console.log(data.landpads);
 </script>
 
 <h1>Welcome to SvelteKit</h1>
