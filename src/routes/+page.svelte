@@ -2,6 +2,7 @@
 	import { ListOutline, GridOutline } from 'flowbite-svelte-icons';
 	import DropdownFilter from '$lib/components/DropdownFilter.svelte';
 	import ListView from '$lib/components/ListView.svelte';
+	import Gridview from '$lib/components/Gridview.svelte';
 	let { data } = $props();
 	let viewMode: 'list' | 'grid' = $state('list');
 	let filterByStatus = $state('all');
@@ -15,7 +16,7 @@
 </script>
 
 <main class="container mx-auto mt-8 px-2">
-	<div class="flex items-center">
+	<div class="mb-4 flex items-center">
 		<div class="rounded-md border">
 			<button
 				class="p-3 transition-colors duration-300 hover:bg-gray-200 hover:text-[#1C64F2]"
@@ -40,5 +41,9 @@
 		</div>
 	</div>
 
-	<ListView launches={filteredData} onClick={() => {}} />
+	{#if viewMode === 'list'}
+		<ListView launches={filteredData} onClick={() => {}} />
+	{:else}
+		<Gridview launchs={filteredData} />
+	{/if}
 </main>
