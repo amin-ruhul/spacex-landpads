@@ -26,9 +26,9 @@
 	}
 </script>
 
-<main class="mx-auto mt-12 px-2 lg:px-20">
-	<div class="grid gap-6 lg:grid-cols-[1fr,520px]">
-		<section class="overflow-hidden lg:overflow-visible">
+<main class="mx-auto mt-12 px-2 lg:px-20 bg-white">
+	<div class="grid gap-6 lg:grid-cols-[1fr,minmax(300px,30%)]">
+		<section class="overflow-hidden ">
 			<div class="mb-4 flex items-center">
 				<div class="rounded-md border flex">
 					<button
@@ -72,7 +72,9 @@
 		bind:open={clickOutsideModal}
 		autoclose
 		outsideclose
+		headerClass="flex justify-between items-center p-4 rounded-t-lg text-gray-900 font-semibold"
+		
 	>
-		<p>{selectedLaunchDetails.details}</p>
+		<p class="text-gray-500">{selectedLaunchDetails.details}</p>
 	</Modal>
 </main>

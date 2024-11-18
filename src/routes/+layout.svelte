@@ -7,7 +7,7 @@
 </script>
 
 
-<Navbar border class="py-4">
+<Navbar border class="py-4 bg-white">
 	<NavBrand href="/" class="mx-auto">
 		<img src={logo} class="h-6 md:h-[2.375rem]" alt="space x logo" />
 	</NavBrand>
