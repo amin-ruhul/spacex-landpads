@@ -19,6 +19,7 @@
 		$props();
 </script>
 
+<div class="border rounded-lg border-[#E5E7EB]">
 <Table shadow>
 	<TableHead theadClass="uppercase text-xs py-6">
 		<TableHeadCell padding="p-4">Full Name</TableHeadCell>
@@ -67,3 +68,4 @@
 		{/each}
 	</TableBody>
 </Table>
+</div>
