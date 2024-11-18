@@ -13,7 +13,7 @@
 				<span class="text-sm font-medium">{progress}%</span>
 			</div>
 		{/if}
-		<Progressbar {progress} progressClass="bg-pink-600 dark:bg-pink-400" />
+		<Progressbar {progress} progressClass="bg-green-400" size="h-1.5" />
 		{#if !isGridView}
 			<p class="text-xs font-medium text-gray-500">{progress}%</p>
 		{/if}

@@ -26,13 +26,13 @@
 	}
 </script>
 
-<main class="mx-auto mt-8 px-2 lg:px-20">
+<main class="mx-auto mt-12 px-2 lg:px-20">
 	<div class="grid gap-6 lg:grid-cols-[1fr,520px]">
 		<section class="overflow-hidden lg:overflow-visible">
 			<div class="mb-4 flex items-center">
-				<div class="rounded-md border">
+				<div class="rounded-md border flex">
 					<button
-						class="p-3 transition-colors duration-300 hover:bg-gray-200 hover:text-[#1C64F2]"
+						class="p-2 transition-colors duration-300 hover:bg-gray-200 hover:text-[#1C64F2]"
 						class:bg-gray-200={viewMode === 'list'}
 						class:text-[#1C64F2]={viewMode === 'list'}
 						onclick={() => (viewMode = 'list')}
@@ -40,7 +40,7 @@
 						<ListOutline class="h-5 w-5"></ListOutline>
 					</button>
 					<button
-						class="p-3 transition-colors duration-300 hover:bg-gray-200 hover:text-[#1C64F2]"
+						class="p-2 transition-colors duration-300 hover:bg-gray-200 hover:text-[#1C64F2]"
 						class:bg-gray-200={viewMode === 'grid'}
 						class:text-[#1C64F2]={viewMode === 'grid'}
 						onclick={() => (viewMode = 'grid')}

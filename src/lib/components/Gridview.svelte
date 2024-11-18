@@ -14,8 +14,8 @@
 	{#each launchs as launch}
 		<div class="space-y-4 rounded-md border p-4">
 			<div class="space-y-2">
-				<h3 class="font-semibold">{launch.full_name}</h3>
-				<p class="text-muted-foreground text-sm">
+				<h3 class="font-semibold text-sm">{launch.full_name}</h3>
+				<p class="text-sm">
 					{launch.location.name}, {launch.location.region}
 				</p>
 			</div>
@@ -32,7 +32,7 @@
 				<StatusTag status={launch.status} />
 				<div class="flex items-center gap-2">
 					<button
-						class="cursor-pointer rounded-md bg-gray-100 px-3 py-1 text-sm font-semibold text-gray-900"
+						class="cursor-pointer rounded-md bg-gray-100 px-3 py-1 text-xs font-medium text-gray-900"
 						onclick={() => onClick({ title: launch.full_name, details: launch.details })}
 					>
 						View Details

@@ -41,9 +41,9 @@
 				<TableBodyCell tdClass="text-gary-900  font-semibold text-sm p-4">
 					{launch.location.region}
 				</TableBodyCell>
-				<TableBodyCell tdClass="text-gary-900  font-semibold text-sm p-4">
+				<TableBodyCell tdClass="text-gary-900 p-4">
 					<button
-						class="cursor-pointer rounded-md bg-gray-100 px-3 py-1 text-gray-900"
+						class="cursor-pointer rounded-md bg-gray-100 px-3 py-1 text-gray-900 font-medium text-xs"
 						onclick={() => onClick({ title: launch.full_name, details: launch.details })}
 					>
 						View Details

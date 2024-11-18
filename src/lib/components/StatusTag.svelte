@@ -3,7 +3,7 @@
 </script>
 
 <p
-	class="inline-block rounded-md px-[10px] py-[2px] text-xs font-medium"
+	class="inline-block rounded-md px-[10px] py-[2px] text-xs font-medium capitalize"
 	class:bg-green-100={status === 'active'}
 	class:text-green-800={status === 'active'}
 	class:bg-red-100={status === 'retired'}

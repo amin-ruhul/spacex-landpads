@@ -48,14 +48,15 @@
 							showAlways: true,
 							show: true,
 							label: 'Landing Pads',
-							formatter: function (w: any) {
-								const sum = w.globals.seriesTotals.reduce((a: number, b: number) => a + b, 0);
-								return `${sum}`;
-							}
+							fontSize:"16",
+							fontWeight:400,
+							color:"#6B7280"
 						},
 						value: {
 							show: true,
 							offsetY: -20,
+							fontWeight:700,
+							fontSize:"30px",
 							formatter: function (value: any) {
 								return value.toString();
 							}
@@ -75,7 +76,7 @@
 	});
 </script>
 
-<div class="w-full rounded-lg border border-[#E5E7EB] shadow-md">
+<div class="w-full rounded-lg border border-[#E5E7EB] shadow">
 	<p class="p-3 font-semibold text-gray-900">Success Rate Chart</p>
 	<Chart {options} class="h-[315px] w-full" />
 </div>
